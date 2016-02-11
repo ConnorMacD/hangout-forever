@@ -10,12 +10,14 @@
     "128": "icons/icon128.png"
   },
   "permissions": [
-    "https://plus.google.com/hangouts/_/*"
+    "https://plus.google.com/hangouts/_/*",
+    "https://hangouts.google.com/hangouts/_/"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://plus.google.com/hangouts/_/*"
+        "https://plus.google.com/hangouts/_/*",
+        "https://hangouts.google.com/hangouts/_/"
       ],
       "js": [
         "src/inject/inject.js"
