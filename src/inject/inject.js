@@ -27,7 +27,7 @@ chrome.extension.sendMessage({}, function(response) {
 					}
 				);
 			}
-			setInterval(main, 14.5 * 1000); // Check every 14.5 seconds
+			setInterval(main, 6.5 * 1000); // Check every 6.5 seconds
 	}
 }, 10);
 });
