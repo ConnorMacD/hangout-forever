@@ -12,7 +12,6 @@ chrome.extension.sendMessage({}, function(response) {
 
 			//This function carries out the automatic joining.
 			function joinHangout() {
-				console.log("Looking for join button...")
 				$('div[role="button"]').each(
 					function() {
 						var element = this;
@@ -28,14 +27,12 @@ chrome.extension.sendMessage({}, function(response) {
 								);
 								element.dispatchEvent(evt);
 							});
-							console.log("found join button! cancelling refreshJoinCheck interval...");
 							clearInterval(refreshJoinCheck);
 						}
 					}
 				);
 				currentCheckAmount++;
 				if (currentCheckAmount == cancelJoinCheck) {
-					console.log("couldn't find join button... cancelling refreshJoinCheck interval...");
 					clearInterval(refreshJoinCheck);
 				}
 			}
